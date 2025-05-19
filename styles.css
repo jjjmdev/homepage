@@ -107,8 +107,8 @@ textarea:not([rows]) {
 
 /* GENERAL STYLES */
 .header__container,
-.projects__container,
-.footer__container {
+.projects,
+.footer {
 	margin: 0 auto;
 	max-width: 1200px;
 	padding: 3rem;
@@ -298,10 +298,51 @@ h2 {
 	}
 
 	.header__container,
-	.projects__container,
-	.contact__container {
+	.projects,
+	.footer {
 		margin: 0 auto;
 		max-width: 1200px;
 		padding: 1rem;
 	}
+}
+
+/* MAIN: PROJECTS */
+
+.projects__container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 1rem;
+}
+
+.projects__title {
+	padding-bottom: 1rem;
+}
+
+.projects__card {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	border-radius: 0.5rem;
+}
+
+.projects__card-screenshot {
+	height: 12rem;
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+			rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+		border-top-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
+	}
+}
+
+.projects__card-title h3 {
+	margin-top: 0.5rem;
+	margin-bottom: 0.3rem;
+}
+
+.projects__card-body {
+	padding: 1rem;
+	padding-top: 0px;
 }
