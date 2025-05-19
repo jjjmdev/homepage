@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700");
+
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000");
+
+/* -- VARIABLES -- */
+:root {
+	--color-blue: #0891b2;
+}
+
+/* --- RESET --- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+/* GENERAL STYLES */
+.header__container,
+.projects__container,
+.contact__container {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Crimson Text", serif;
+}
+
+body {
+	font-family: "DM Sans", sans-serif;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+/* HEADER */
+.header {
+	position: relative;
+}
+
+.header__background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-blue);
+	transform: skewY(-11deg);
+	transform-origin: 0;
+	z-index: -1;
+}
+
+.header__image img {
+	object-fit: cover;
+	width: 100%;
+	max-height: 600px;
+}
+
+.header__image {
+	position: relative;
+}
+
+.header__image h1 {
+	position: absolute;
+	bottom: 0;
+	color: white;
+	width: 100%;
+	text-align: center;
+}
+
+.header__body {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.header__body img {
+	display: none;
+}
+
+.header__content {
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.header__body-links {
+	list-style-type: none;
+	display: flex;
+	gap: 0.2rem;
+	margin: 0;
+	align-self: flex-end;
+}
+
+@media screen and (max-width: 900px) {
+	.header {
+		padding-left: 40px;
+	}
+
+	.header__background {
+		height: 75%;
+	}
+
+	.header__content {
+		display: block;
+		padding-bottom: 2rem;
+		margin-top: 3rem;
+	}
+
+	.header__image img {
+		display: none;
+	}
+
+	.header__image h1 {
+		right: -150px;
+	}
+
+	.header__body {
+		display: block;
+	}
+
+	.header__body img {
+		display: block;
+		float: left;
+		height: 350px;
+		width: 350px;
+		margin: -60px 20px 20px -60px;
+		object-fit: cover;
+	}
+
+	.header__body-links {
+		float: right;
+		padding-top: 1rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	.header {
+		padding-left: 0;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	.header__background {
+		height: 50%;
+	}
+
+	.header__body img {
+		display: none;
+	}
+
+	.header__image img {
+		display: block;
+		height: 250px;
+	}
+
+	.header__image h1 {
+		left: 0;
+	}
+
+	.header__content {
+		padding-bottom: 0;
+		margin-top: 0;
+	}
+
+	.header__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header__body h1 {
+		margin-top: 0;
+	}
+
+	.header__body-links {
+		align-self: center;
+		margin-top: 1rem;
+		padding-left: 0;
+	}
+
+	.header__container,
+	.projects__container,
+	.contact__container {
+		margin: 0 auto;
+		max-width: 1200px;
+		padding: 1rem;
+	}
+}
