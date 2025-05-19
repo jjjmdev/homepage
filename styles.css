@@ -108,10 +108,22 @@ textarea:not([rows]) {
 /* GENERAL STYLES */
 .header__container,
 .projects__container,
-.contact__container {
+.footer__container {
 	margin: 0 auto;
 	max-width: 1200px;
 	padding: 3rem;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	gap: 0.6rem;
+	margin: 0;
+}
+
+li a i {
+	font-size: 1.5rem;
+	cursor: pointer;
 }
 
 h1,
@@ -189,10 +201,6 @@ h2 {
 }
 
 .header__body-links {
-	list-style-type: none;
-	display: flex;
-	gap: 0.2rem;
-	margin: 0;
 	align-self: flex-end;
 }
 
