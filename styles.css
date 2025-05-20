@@ -107,8 +107,7 @@ textarea:not([rows]) {
 
 /* GENERAL STYLES */
 .header__container,
-.projects,
-.footer {
+.projects {
 	margin: 3rem auto;
 	max-width: 1200px;
 	padding: 0 3rem;
@@ -305,8 +304,7 @@ h2 {
 	}
 
 	.header__container,
-	.projects,
-	.footer {
+	.projects {
 		margin: 0 auto;
 		max-width: 1200px;
 		padding: 1rem;
@@ -369,4 +367,71 @@ h2 {
 .projects__card-body {
 	padding: 1rem;
 	padding-top: 0px;
+}
+
+/* FOOTER */
+.footer {
+	width: 100%;
+	background-color: var(--color-blue);
+	color: white;
+	margin-top: 1rem;
+}
+
+.footer__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1.5rem 3rem;
+
+	display: flex;
+	gap: 2rem;
+}
+
+.footer__body h2 {
+	margin: 0;
+}
+
+.footer__body ul:not(.footer__body-links) {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	margin: 1.5rem 0;
+}
+
+.footer__body span {
+	margin-right: 0.5rem;
+}
+
+.footer__image {
+	max-width: 50%;
+	height: auto;
+}
+
+.footer__image img {
+	height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+	.footer__image {
+		max-width: 40%;
+		overflow: hidden;
+	}
+
+	.footer__image img {
+		object-fit: cover;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.footer__container {
+		flex-direction: column;
+		padding: 1.5rem 0 0 0;
+	}
+
+	.footer__body {
+		padding: 1rem;
+	}
+
+	.footer__image {
+		max-width: 100%;
+	}
 }
