@@ -4,8 +4,6 @@ This is a homepage project built as part of [The Odin Project's](https://www.the
 
 [Live Demo](https://jjjmdev.github.io/homepage/)
 
-<br>
-
 ## Features
 
 - **Responsive Design:** The site adapts to different screen sizes and devices.
